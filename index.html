@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#102746">
+<meta name="description" content="صفحه رسمی احراز هویت نماینده صنوف لیسه عالی خصوصی نجات">
+<title>احراز هویت | لیسه عالی خصوصی نجات</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #102746;
+  --blue: #1769c8;
+  --gold: #d6ad59;
+  --gold-light: #fff0bc;
+  --teal: #178b91;
+  --cream: #fffdf7;
+  --green: #08734a;
+  --text: #24344a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  font-family: "Vazirmatn", "Noto Naskh Arabic", Tahoma, sans-serif;
+  background:
+    radial-gradient(ellipse at top, #fffdf5 0%, transparent 65%),
+    linear-gradient(145deg, #e4edf7, #f9f0dc);
+}
+
+.page {
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  border-radius: 30px;
+  background: var(--cream);
+  box-shadow:
+    0 18px 50px #10274620,
+    inset 0 0 0 5px #fff7df,
+    inset 0 0 0 7px #ead5a3;
+}
+
+.top-border {
+  height: 9px;
+  background: linear-gradient(
+    90deg,
+    #9b6728,
+    #ffe8a1,
+    #168b91,
+    #fff0bc,
+    #a56c2c
+  );
+}
+
+.corner {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-color: var(--gold);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 2;
+  opacity: .85;
+}
+
+.corner.tl {
+  top: 14px;
+  left: 14px;
+  border-width: 2px 0 0 2px;
+  border-radius: 13px 0 0 0;
+}
+
+.corner.tr {
+  top: 14px;
+  right: 14px;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 13px 0 0;
+}
+
+.corner.bl {
+  bottom: 14px;
+  left: 14px;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 13px;
+}
+
+.corner.br {
+  bottom: 14px;
+  right: 14px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 13px 0;
+}
+
+.header {
+  text-align: center;
+  padding: 27px 20px 13px;
+  background:
+    radial-gradient(ellipse at top, #fff7df, transparent 75%);
+}
+
+.logo-frame {
+  position: relative;
+  width: clamp(104px, 29vw, 135px);
+  height: clamp(104px, 29vw, 135px);
+  margin: 0 auto 14px;
+  padding: 7px;
+  border-radius: 34% 34% 42% 42%;
+  background: linear-gradient(
+    145deg,
+    #fff0b9,
+    #c2923e 35%,
+    #f8df96 58%,
+    #a36c2c
+  );
+  box-shadow:
+    0 7px 20px #8b652b28,
+    inset 0 0 0 2px #fff5d3;
+}
+
+.logo-frame::before {
+  content: "✦";
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b58a3d;
+  font-size: 21px;
+  z-index: 2;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: white;
+  border: 2px solid #fff9e8;
+  border-radius: 29% 29% 37% 37%;
+}
+
+.school-name {
+  color: var(--navy);
+  font-family: "Noto Naskh Arabic", "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(23px, 6.4vw, 31px);
+  font-weight: 800;
+  line-height: 1.8;
+  margin: 0;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+.subtitle {
+  color: #96702e;
+  font-size: clamp(12px, 3.4vw, 15px);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.content {
+  text-align: center;
+  padding: 20px clamp(15px, 4.5vw, 28px) 30px;
+}
+
+.success {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+  color: var(--green);
+  background: linear-gradient(135deg, #e9f9f0, #d9f2e5);
+  border: 1px solid #b2dfc7;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: clamp(12px, 3.5vw, 15px);
+  font-weight: 800;
+  margin-bottom: 23px;
+}
+
+.check {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  background: #14945d;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.photo-frame {
+  width: clamp(145px, 43vw, 185px);
+  height: clamp(175px, 53vw, 225px);
+  margin: 0 auto 19px;
+  padding: 5px;
+  position: relative;
+  border-radius: 28px 28px 42px 42px;
+  background: linear-gradient(
+    135deg,
+    #f9e6a9,
+    #ae7a31,
+    #f8dfa0,
+    #b37d34
+  );
+  box-shadow:
+    0 10px 25px #10274620,
+    inset 0 0 0 1px #fff1c3;
+}
+
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid #d6ad5966;
+  border-radius: 33px 33px 47px 47px;
+  pointer-events: none;
+}
+
+.person-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 24px 24px 37px 37px;
+  background: #edf2f7;
+}
+
+.person-name {
+  color: var(--blue);
+  font-family: "Noto Naskh Arabic", "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(28px, 7.2vw, 41px);
+  font-weight: 800;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  margin: 4px 0;
+}
+
+.person-title {
+  color: var(--navy);
+  font-size: clamp(16px, 4.5vw, 22px);
+  font-weight: 800;
+  line-height: 1.9;
+  margin-top: 2px;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 310px;
+  margin: 20px auto;
+  color: #b68a3c;
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, #d3ad62);
+}
+
+.ornament::after {
+  transform: rotate(180deg);
+}
+
+.ornament span {
+  font-size: 21px;
+}
+
+.motto {
+  color: #173a60;
+  font-family: "Noto Naskh Arabic", "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(18px, 4.9vw, 23px);
+  font-weight: 800;
+  line-height: 2;
+}
+
+.validity {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border-radius: 13px;
+  border: 1px solid #e6cc8e;
+  background: linear-gradient(135deg, #fff6df, #ffedc2);
+  color: #79500b;
+  font-size: clamp(13px, 3.8vw, 16px);
+  font-weight: 800;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #f8efd9, #fff8e9);
+  border-top: 1px solid #e8d4a7;
+  color: #785a25;
+  font-family: "Noto Naskh Arabic", "Vazirmatn", Tahoma, sans-serif;
+  font-size: clamp(13px, 3.8vw, 16px);
+  font-weight: 800;
+  line-height: 2;
+}
+
+.footer-star {
+  display: block;
+  color: #b68a3c;
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.small-note {
+  color: #7b8796;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+@media (max-width: 360px) {
+  body {
+    padding: 8px;
+  }
+
+  .card {
+    border-radius: 23px;
+  }
+
+  .header {
+    padding-top: 23px;
+  }
+
+  .content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .success {
+    padding: 9px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    animation: appear .65s ease-out;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .page {
+    max-width: 100%;
+  }
+
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+  <article class="card">
+
+    <div class="top-border"></div>
+
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+
+    <header class="header">
+
+      <div class="logo-frame">
+        <img
+          class="logo"
+          src="https://ahmadshujanejat3-beep.github.io/nejat-qr/logo.png"
+          alt="لوگوی لیسه عالی خصوصی نجات"
+          onerror="this.onerror=null;this.src='logo.png';"
+        >
+      </div>
+
+      <h1 class="school-name">
+        لیسه عالی خصوصی نجات
+      </h1>
+
+      <div class="subtitle">
+        سامانهٔ احراز هویت نمایندهٔ صنف
+      </div>
+
+    </header>
+
+    <section class="content">
+
+      <div class="success">
+        <span class="check">✓</span>
+        احراز هویت با موفقیت انجام شد
+      </div>
+
+
+<div class="photo-frame">
+  <img
+    class="person-photo"
+    src="https://drive.google.com/thumbnail?id=11WrwKg4vEfqA3uaoIzdrhmXaR4c7cTEi&sz=w1000"
+    alt="عکس یاسر مرادی   ولد نعمت الله  "
+    onerror="this.onerror=null;this.src='yahia.jpg';"
+  >
+</div>
+
+
+      <h2 class="person-name">
+        یاسر مرادی   ولد نعمت الله 
+      </h2>
+
+      <div class="person-title">
+        نمایندهٔ صنف نهم الف  سال ۱۴۰۵
+      </div>
+
+      <div class="ornament">
+        <span>✦</span>
+      </div>
+
+      <div class="motto">
+        نجات، اولین نهاد تعلیمی موفق در زون امام صاحب
+      </div>
+
+      <div class="validity">
+        صرف برای سال ۱۴۰۵ معتبر است
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <span class="footer-star">✦ ❖ ✦</span>
+      هیئت رهبری لیسه عالی خصوصی نجات
+      <div class="small-note">
+        این صفحه برای بررسی مشخصات نمایندهٔ صنف تهیه شده است.
+      </div>
+    </footer>
+
+  </article>
+</main>
+</body>
+</html>
